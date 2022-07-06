@@ -53,7 +53,7 @@ export const updateContactUs = async (req, res) => {
   const replyStatus = req.body.replyStatus;
 
   try {
-    await Club.update(
+    await ContactUs.update(
       { replyStatus },
       {
         where: {
@@ -61,7 +61,6 @@ export const updateContactUs = async (req, res) => {
         },
       }
     );
-    console.log(id);
     console.log("dddddddddddddddddddddddddddddddddddd");
     res.status(200).json({ msg: "Contact us Updated Successfuly" });
   } catch (error) {
